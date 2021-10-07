@@ -5,6 +5,6 @@
 
 #define UNIT_TESTING
 
-void mergesort(int size, int* values);
+void mergeSort(int size, int* values);
 
 #endif

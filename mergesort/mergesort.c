@@ -6,7 +6,7 @@ void mergesortRanges(int* values, int startIndex, int endIndex);
 int needsSorting(int rangeSize);
 
 
-void mergesort(int size, int* values) {
+void mergeSort(int size, int* values) {
     mergesortRanges(values, 0, size - 1);
 }
 
