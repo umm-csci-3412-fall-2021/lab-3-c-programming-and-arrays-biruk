@@ -4,7 +4,7 @@
 
 int calculateArraySize(int *sizes, int num_arrays) {
     int total = 0;
-    for (int i = 0; i < arrays_size; i++) {
+    for (int i = 0; i < num_arrays; i++) {
         total = total + array[i];
     }
     return total;
