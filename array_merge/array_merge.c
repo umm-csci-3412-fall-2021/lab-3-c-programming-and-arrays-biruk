@@ -1,6 +1,5 @@
 #include "array_merge.h"
 #include "../mergesort/mergesort.c"
-#include "../mergesort/mergesort.h"
 
 int calculateArraySize(int *sizes, int num_arrays) {
     int total = 0;
