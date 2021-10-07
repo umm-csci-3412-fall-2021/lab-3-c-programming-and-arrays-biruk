@@ -7,7 +7,7 @@ int needsSorting(int rangeSize);
 
 
 void mergeSort(int size, int* values) {
-    mergesortRanges(values, 0, size - 1);
+    mergesortRanges(values, 0, size);
 }
 
 
@@ -50,6 +50,7 @@ void mergeRanges(int* values, int startIndex, int midPoint,int endIndex) {
     for (int i = 0; i < rangeSize; ++i) {
         values[i + startIndex] = destination[i];
     }
+    free(destination);
 }
 
 int needsSorting(int rangeSize) {
