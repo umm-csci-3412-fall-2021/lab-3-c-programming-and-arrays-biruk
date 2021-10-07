@@ -41,6 +41,13 @@ int *array_merge(int num_arrays, int *sizes, int **values) {
     int *unique;
 
     int index = 0;
+
+    if(num_arrays == 0){
+        int* placeholder = (int*)calloc(1, sizeof(int));
+        placeholder[0] = 0;
+        return placeholder;
+    }
+
     for (int i = 0; i < num_arrays; ++i) {
         int *current = values[i];
         for (int j = 0; j < sizes[i]; j++) {
