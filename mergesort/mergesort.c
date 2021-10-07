@@ -1,4 +1,4 @@
-#include <malloc.h>
+#include <stdlib.h>
 #include "mergesort.h"
 void mergeRanges(int* values, int startIndex, int midPoint,
                  int endIndex);
@@ -23,7 +23,7 @@ void mergesortRanges(int* values, int startIndex, int endIndex) {
 
 void mergeRanges(int* values, int startIndex, int midPoint,int endIndex) {
     int rangeSize = endIndex - startIndex;
-    int* destination = (int*) calloc(rangeSize, sizeof(char));
+    int *destination = (int*) calloc(rangeSize, sizeof(char));
     int firstIndex = startIndex;
     int secondIndex = midPoint;
     int copyIndex = 0;
@@ -53,5 +53,8 @@ void mergeRanges(int* values, int startIndex, int midPoint,int endIndex) {
 }
 
 int needsSorting(int rangeSize) {
-    return rangeSize >= 2;
+    if (rangeSize >= 2){
+        return 1;
+    }
+    return 0;
 }
