@@ -18,6 +18,7 @@ TEST(ArrayMerge, Handle_empty_list) {
 
   result = array_merge(0, sizes,  a);
   arrays_match(1, result, expected);
+  free(result);
 }
 
 TEST(ArrayMerge, Handle_singleton_list) {
