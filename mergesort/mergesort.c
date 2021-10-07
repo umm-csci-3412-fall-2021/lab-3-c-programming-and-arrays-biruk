@@ -1,22 +1,22 @@
 #include <stdlib.h>
 #include "mergesort.h"
-void mergeRanges(int* values, int startIndex, int midPoint,
-                 int endIndex);
-void mergesortRanges(int* values, int startIndex, int endIndex);
+
+void mergeRanges(int* values, int startIndex, int midPoint,int endIndex);
+void mergesortWithRanges(int* values, int startIndex, int endIndex);
 int needsSorting(int rangeSize);
 
 
 void mergeSort(int size, int* values) {
-    mergesortRanges(values, 0, size);
+    mergesortWithRanges(values, 0, size);
 }
 
 
-void mergesortRanges(int* values, int startIndex, int endIndex) {
+void mergesortWithRanges(int* values, int startIndex, int endIndex) {
     int rangeSize = endIndex - startIndex;
     if (needsSorting(rangeSize)) {
         int midPoint = (startIndex + endIndex) / 2;
-        mergesortRanges(values, startIndex, midPoint);
-        mergesortRanges(values, midPoint, endIndex);
+        mergesortWithRanges(values, startIndex, midPoint);
+        mergesortWithRanges(values, midPoint, endIndex);
         mergeRanges(values, startIndex, midPoint, endIndex);
     }
 }
