@@ -23,7 +23,7 @@ void mergesortRanges(int* values, int startIndex, int endIndex) {
 
 void mergeRanges(int* values, int startIndex, int midPoint,int endIndex) {
     int rangeSize = endIndex - startIndex;
-    int *destination = (int*) calloc(rangeSize, sizeof(char));
+    int *destination = (int*) calloc(rangeSize, sizeof(int));
     int firstIndex = startIndex;
     int secondIndex = midPoint;
     int copyIndex = 0;
